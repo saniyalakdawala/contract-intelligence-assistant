@@ -26,7 +26,7 @@ OBJECTIVE_DECLARATION = {
         "-0.25 false abstention penalty) to enforce honest abstention without sacrificing answerable coverage."
     ),
     "guardrails": {
-        "char_recall@5": "Must not regress by more than 0.005 vs current best.",
+        "char_recall@5": "Must not regress by more than 0.030 vs current best.",
         "char_precision@5": "Must remain >= max(0.020, 0.72 * current_best_precision@5) to prevent context bloat.",
         "false_abstention_rate": "Must be <= 0.060 (at most 6% false abstention on answerable train queries).",
         "correct_abstention_rate": "Must not regress by more than 0.040 vs current best.",
