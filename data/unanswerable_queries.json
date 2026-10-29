@@ -1,0 +1,333 @@
+{
+  "dataset": "ClauseTrace-CUAD-Mini-Unanswerable",
+  "version": "1.0.0",
+  "total_queries": 36,
+  "train_count": 26,
+  "test_count": 10,
+  "queries": [
+    {
+      "query_id": "UNANS-001",
+      "query": "Consider the Content Distribution Agreement between Netflix, Inc. and Sony Pictures Television Inc.; Does this agreement allow sublicensing to third-party streaming platforms?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unindexed_contract",
+      "reason": "Neither Netflix, Inc. nor Sony Pictures Television Inc. has any agreement in the 29-contract CUAD-mini corpus.",
+      "split": "test"
+    },
+    {
+      "query_id": "UNANS-002",
+      "query": "Consider the Co-Branding Agreement between 2TheMart.com, Inc. and i-Escrow, Inc.; What is the governing law for this contract?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unindexed_contract",
+      "reason": "The 2TheMart.com / i-Escrow Co-Branding Agreement belongs to full CUAD but is excluded from the 29 contracts indexed by LegalBench-RAG-mini.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-003",
+      "query": "Consider the Strategic Alliance Agreement between Adaptimmune Therapeutics plc and GlaxoSmithKline Intellectual Property Development Ltd.; How are milestone payments structured?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unindexed_contract",
+      "reason": "The Adaptimmune Therapeutics Strategic Alliance Agreement is not among the 29 contracts referenced by the 194 LegalBench-RAG-mini queries.",
+      "split": "test"
+    },
+    {
+      "query_id": "UNANS-004",
+      "query": "Consider the Distributor Agreement between Accuray Incorporated and Siemens Medical Solutions USA, Inc.; What are the minimum annual purchase commitments?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unindexed_contract",
+      "reason": "The Accuray Distributor Agreement is not indexed in the 29-document LegalBench-RAG-mini corpus.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-005",
+      "query": "Consider the Endorsement Agreement between Adams Golf, Inc. and Tom Watson; What is the annual base retainer fee?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unindexed_contract",
+      "reason": "The Adams Golf Endorsement Agreement is absent from the 29 indexed CUAD-mini contracts.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-006",
+      "query": "Consider the Master Theatrical Exhibition Agreement between Walt Disney Studios Motion Pictures and AMC Entertainment Holdings, Inc.; What is the exclusive theatrical window duration?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unindexed_contract",
+      "reason": "No agreement between Walt Disney Studios and AMC Entertainment exists in the indexed corpus.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-007",
+      "query": "Consider the Sports Broadcast Rights Agreement between Star India Private Limited and the International Cricket Council; Which digital territories are covered by the exclusive broadcast license?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unindexed_contract",
+      "reason": "No Star India or ICC broadcast agreement is present in the 29 indexed CUAD-mini contracts.",
+      "split": "test"
+    },
+    {
+      "query_id": "UNANS-008",
+      "query": "Consider the Reseller Agreement between Adia Nutrition, Inc. and Nutrition Express Corp.; Can this contract be terminated for convenience?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unindexed_contract",
+      "reason": "The Adia Nutrition Reseller Agreement is part of full CUAD but is not one of the 29 contracts indexed in CUAD-mini.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-009",
+      "query": "Consider the Amendment No. 3 to Wireless Content License Agreement between Fox Mobile Entertainment, Inc. and Glu Mobile Inc.; What is the cap on liability under this contract?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_clause_or_term",
+      "reason": "Amendment No. 3 between Fox Mobile and Glu Mobile is a 1,902-character amendment that only modifies Section 4 (Term) and Section 17(a) (Notices) and contains no liability cap provision.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-010",
+      "query": "Consider the Amendment No. 3 to Wireless Content License Agreement between Fox Mobile Entertainment, Inc. and Glu Mobile Inc.; Does this contract include a most favored nation clause or minimum royalty guarantee?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_clause_or_term",
+      "reason": "Amendment No. 3 between Fox Mobile and Glu Mobile only extends the expiration date and updates notice recipients; it contains no MFN or royalty guarantee terms.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-011",
+      "query": "Consider the Gas Franchise Agreement between the Town of Vinton and Roanoke Gas Company; Is there a source code escrow or software maintenance obligation in this contract?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_clause_or_term",
+      "reason": "The Town of Vinton / Roanoke Gas Company agreement is a municipal natural gas distribution franchise and contains no software or source code escrow clauses.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-012",
+      "query": "Consider the Non-Competition Agreement and Right of First Offer between Glamis Gold Ltd. and Western Copper Corporation; Does this contract include any revenue or profit-sharing arrangements?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_clause_or_term",
+      "reason": "The Glamis Gold / Western Copper agreement covers only a 2-year non-competition covenant and a right of first offer on property sales, with no revenue or profit-sharing arrangement.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-013",
+      "query": "Consider the Sponsorship Agreement between Jacksonville Jaguars, LLC and The ARC Group, Inc.; Does this contract permit settlement of sponsorship fees in cryptocurrency or Bitcoin?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_clause_or_term",
+      "reason": "Neither the Jacksonville Jaguars Sponsorship Agreement nor any of the 29 indexed contracts mentions cryptocurrency or Bitcoin payment terms.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-014",
+      "query": "Consider the Cooperation Agreement between HPIL ENERGYTECH Inc. and GINARES GROUP AG for Renewable Energy Projects; What are the liquidated damages per day for delayed project delivery?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_clause_or_term",
+      "reason": "The HPIL ENERGYTECH / GINARES GROUP Cooperation Agreement contains no liquidated damages schedule or per-diem delay penalty.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-015",
+      "query": "Consider the Business Affiliate Agreement between Dr. George D. Green and UNION DENTAL CORP.; Does this contract contain a most favored nation pricing clause for dental supplies?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_clause_or_term",
+      "reason": "The Union Dental Affiliate Agreement contains no most favored nation clause.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-016",
+      "query": "Consider the Amendment and Termination of Joint Venture Agreement between Veoneer and Nissin Parties; What are the audit rights and royalty inspection procedures under this contract?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_clause_or_term",
+      "reason": "The Veoneer / Nissin agreement terminates a joint venture and contains no royalty audit rights or inspection procedures.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-017",
+      "query": "Consider the Marketing and Transportation Services Agreement between Purolator Courier Ltd. and Parcelway Courier Systems Canada Ltd. (Dynamex Inc.); What are the GDPR cross-border personal data transfer obligations under this contract?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unsupported_jurisdiction",
+      "reason": "Executed in 1996 under Canadian/Ontario law, the Purolator / Dynamex agreement predates the EU GDPR by two decades and contains no GDPR provisions.",
+      "split": "test"
+    },
+    {
+      "query_id": "UNANS-018",
+      "query": "Consider the Amendment No. 3 to Wireless Content License Agreement between Fox Mobile Entertainment, Inc. and Glu Mobile Inc.; What is the governing law and arbitration venue for this contract?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unsupported_jurisdiction",
+      "reason": "Amendment No. 3 between Fox Mobile and Glu Mobile does not state a governing law or arbitration venue anywhere in its text.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-019",
+      "query": "Consider the Gas Transportation Agreement between PennTex North Louisiana Operating, LLC and MRD Operating LLC; How are disputes resolved under Singapore International Arbitration Centre (SIAC) rules?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unsupported_jurisdiction",
+      "reason": "The PennTex / MRD Gas Transportation Agreement is governed by Texas law and contains no reference to Singapore or SIAC arbitration.",
+      "split": "test"
+    },
+    {
+      "query_id": "UNANS-020",
+      "query": "Consider the Endorsement Agreement between Holiday RV Superstores, Inc. and Affinity Group, Inc. for Good Sam Branding; What compliance obligations apply under the California Consumer Privacy Act (CCPA)?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unsupported_jurisdiction",
+      "reason": "Executed in 2002, the Holiday RV Superstores Endorsement Agreement contains no CCPA or statutory consumer privacy provisions.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-021",
+      "query": "Consider the Supply Agreement between Florida Chemical Company, LLC and Flotek Chemistry, LLC for Terpene Products; Which European Union REACH chemical registration warranties are assigned to the buyer?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unsupported_jurisdiction",
+      "reason": "The Florida Chemical / Flotek Supply Agreement is governed by Delaware law and contains no EU REACH chemical registration clauses.",
+      "split": "test"
+    },
+    {
+      "query_id": "UNANS-022",
+      "query": "Consider the Agency Agreement between General Electric Capital Corporation and Duckwall-Alco Stores, Inc. for Equipment Leasing; What is the governing law for this contract?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unsupported_jurisdiction",
+      "reason": "As verified in the CUAD annotations, the GE Capital / Duckwall-Alco letter agency agreement does not contain a governing law clause.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-023",
+      "query": "Consider the Intellectual Property Agreement for COVID-19 Treatment Development between Marv Enterprises, LLC, Premier Biomedical, Inc., and Technology Health, Inc.; What is the notice period required to terminate the automatic renewal term?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_date_or_renewal",
+      "reason": "The Premier Biomedical COVID-19 IP Agreement has no automatic renewal clause and no renewal termination notice period.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-024",
+      "query": "Consider the Non-Competition Agreement and Right of First Offer between Glamis Gold Ltd. and Western Copper Corporation; What is the renewal term and renewal notice deadline for this contract?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_date_or_renewal",
+      "reason": "The Glamis Gold / Western Copper Non-Competition Agreement expires after a fixed two-year restricted period and has no renewal term or renewal notice deadline.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-025",
+      "query": "Consider the Agency Agreement for Asset Sale between The Bon-Ton Stores, Inc., GA Retail, Inc., Tiger Capital Group, LLC, and Wilmington Savings Fund Society, FSB; What is the automatic multi-year renewal term after the store closing sale concludes?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_date_or_renewal",
+      "reason": "The Bon-Ton Stores bankruptcy liquidation agency agreement is a one-time asset sale agreement with no multi-year renewal term.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-026",
+      "query": "Consider the Amendment and Termination of Joint Venture Agreement between Veoneer and Nissin Parties; What is the renewal term for extending the joint venture beyond 2025?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_date_or_renewal",
+      "reason": "The Veoneer / Nissin agreement terminates the joint venture rather than renewing it, and contains no renewal term.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-027",
+      "query": "Consider the Sponsorship Agreement between Jacksonville Jaguars, LLC and The ARC Group, Inc.; What is the notice period required to exercise an automatic five-year renewal option?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_date_or_renewal",
+      "reason": "The Jacksonville Jaguars Sponsorship Agreement with ARC Group has a fixed term through March 31, 2021 and contains no automatic five-year renewal option.",
+      "split": "test"
+    },
+    {
+      "query_id": "UNANS-028",
+      "query": "Consider the Gas Franchise Agreement between the Town of Vinton and Roanoke Gas Company; What is the mandatory notice period for automatic annual renewal after the twenty-year term expires?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "missing_date_or_renewal",
+      "reason": "The Town of Vinton Gas Franchise Agreement grants a fixed 20-year term commencing January 1, 2016 and specifies no automatic annual renewal notice period.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-029",
+      "query": "Consider the Amendment No. 3 to Wireless Content License Agreement between Fox Mobile Entertainment, Inc. and Glu Mobile Inc.; Does this agreement allow sublicensing of the mobile games to third-party cloud gaming platforms?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unestablished_ip_or_sublicensing",
+      "reason": "Amendment No. 3 between Fox Mobile and Glu Mobile only amends the expiration date and notice recipient and is completely silent on sublicensing rights.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-030",
+      "query": "Consider the Amendment No. 3 to Wireless Content License Agreement between Fox Mobile Entertainment, Inc. and Glu Mobile Inc.; Who owns the intellectual property in derivative works created from the licensed Fox properties?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unestablished_ip_or_sublicensing",
+      "reason": "Amendment No. 3 between Fox Mobile and Glu Mobile contains no intellectual property ownership or derivative works clauses.",
+      "split": "test"
+    },
+    {
+      "query_id": "UNANS-031",
+      "query": "Consider the Gas Transportation Agreement between PennTex North Louisiana Operating, LLC and MRD Operating LLC; Who owns the intellectual property in derivative software or patented chemical processes developed under this contract?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unestablished_ip_or_sublicensing",
+      "reason": "The PennTex / MRD pipeline gas transportation agreement establishes no intellectual property ownership or derivative software rights.",
+      "split": "test"
+    },
+    {
+      "query_id": "UNANS-032",
+      "query": "Consider the Gas Franchise Agreement between the Town of Vinton and Roanoke Gas Company; Does this contract allow the franchisee to sublicense trademark rights to third-party retail affiliates?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unestablished_ip_or_sublicensing",
+      "reason": "The Town of Vinton Gas Franchise Agreement grants municipal pipeline franchise rights and establishes no trademark sublicensing rights.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-033",
+      "query": "Consider the Agency Agreement between General Electric Capital Corporation and Duckwall-Alco Stores, Inc. for Equipment Leasing; Who owns the intellectual property in derivative works or software modifications created under this agreement?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unestablished_ip_or_sublicensing",
+      "reason": "The GE Capital / Duckwall-Alco equipment leasing agency letter establishes no intellectual property or derivative works ownership.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-034",
+      "query": "Consider the Endorsement Agreement between ABG-Shaq, LLC and Papa John's International, Inc.; Does this contract grant Papa John's the right to train generative artificial intelligence voice clones on Shaquille O'Neal's likeness in perpetuity?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unestablished_ip_or_sublicensing",
+      "reason": "The ABG-Shaq / Papa John's Endorsement Agreement contains no provision authorizing generative AI model training or perpetual AI voice cloning.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-035",
+      "query": "Consider the Marketing and Transportation Services Agreement between Purolator Courier Ltd. and Parcelway Courier Systems Canada Ltd. (Dynamex Inc.); Does this agreement allow sublicensing of video streaming rights to third-party OTT platforms?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unestablished_ip_or_sublicensing",
+      "reason": "The Purolator / Dynamex agreement concerns ground and air courier transportation services and contains no video streaming or OTT sublicensing provisions.",
+      "split": "train"
+    },
+    {
+      "query_id": "UNANS-036",
+      "query": "Consider the Sponsorship Agreement between R. C. Boyd Enterprises, LLC and Cano Petroleum, Inc. for 'Honey Hole'; Who owns the patent rights to oilfield drilling inventions jointly developed by the parties?",
+      "is_answerable": false,
+      "label": "unanswerable",
+      "category": "unestablished_ip_or_sublicensing",
+      "reason": "The R. C. Boyd / Cano Petroleum Sponsorship Agreement is a television fishing show sponsorship contract and establishes no oilfield patent or joint invention ownership.",
+      "split": "test"
+    }
+  ]
+}
