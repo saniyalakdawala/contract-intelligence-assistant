@@ -1,0 +1,47 @@
+name: iter5_hybrid_bm25_dense
+description: Hybrid lexical (BM25 0.82) + semantic (all-MiniLM-L6-v2 0.18) linear
+  fusion.
+seed: 42
+data_dir: data/legalbench_rag
+unanswerable_path: data/unanswerable_queries.json
+cache_dir: outputs/cache
+chunking:
+  strategy: clause_aware
+  chunk_size: 750
+  chunk_overlap: 120
+  min_chunk_size: 80
+  respect_section_boundaries: true
+legal_context:
+  include_doc_header: true
+  header_char_limit: 900
+  doc_routing_weight: 0.85
+  enable_legal_query_expansion: true
+  resolve_cross_references: true
+retrieval:
+  strategy: hybrid
+  top_k: 10
+  candidate_pool_size: 30
+  tfidf_ngram_min: 1
+  tfidf_ngram_max: 1
+  tfidf_sublinear_tf: true
+  tfidf_max_features: 25000
+  bm25_k1: 1.5
+  bm25_b: 0.75
+  dense_model_name: sentence-transformers/all-MiniLM-L6-v2
+  dense_batch_size: 64
+  hybrid_lexical_type: bm25
+  fusion_method: linear
+  lexical_weight: 0.82
+  dense_weight: 0.18
+  rrf_k: 60
+rerank:
+  enabled: false
+  model_name: cross-encoder/ms-marco-MiniLM-L-6-v2
+  top_n: 20
+  alpha: 0.35
+abstention:
+  enabled: true
+  mode: single_threshold
+  min_top_score: 0.14
+  min_clause_score: 0.0
+  min_doc_match_score: 0.0

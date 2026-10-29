@@ -1,0 +1,25 @@
+{
+  "test_evaluation_runs": 2,
+  "runs": [
+    {
+      "run_number": 1,
+      "timestamp": "2026-10-29T18:44:59.927199+00:00",
+      "config_name": "baseline_tfidf",
+      "config_fingerprint": "00b7c0730af4a9e0",
+      "char_recall@5": 0.1785,
+      "char_precision@5": 0.0161,
+      "correct_abstention_rate": 0.1,
+      "false_abstention_rate": 0.0
+    },
+    {
+      "run_number": 2,
+      "timestamp": "2026-10-29T18:46:21.408246+00:00",
+      "config_name": "iter7_final_calibrated_hybrid",
+      "config_fingerprint": "d46b1c5ef9862e22",
+      "char_recall@5": 0.708,
+      "char_precision@5": 0.1073,
+      "correct_abstention_rate": 0.9,
+      "false_abstention_rate": 0.0556
+    }
+  ]
+}
