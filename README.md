@@ -117,7 +117,8 @@ ClauseTrace is strictly an evidence-retrieval system — it never fabricates cla
     ├── test_retrieval.py               # Tests strategies, malformed queries, and config validation
     ├── test_abstention.py              # Tests single/dual-gate abstention and train calibration
     ├── test_evaluation.py              # Tests character-level overlap math and span merging
-    └── test_improvement.py             # Tests train/test isolation and guardrail enforcement
+    ├── test_improvement.py             # Tests train/test isolation and guardrail enforcement
+    └── test_ui_helpers.py              # Tests Streamlit UI helpers, artifact loaders, and highlighting
 ```
 
 ---
@@ -193,7 +194,23 @@ python -m contract_intelligence search "Consider the Sponsorship Agreement betwe
 
 ```bash
 streamlit run app.py
+# Or headless on a specific port:
+python -m streamlit run app.py --server.headless true --server.port 8501
 ```
+
+The Streamlit interface (`app.py`) uses custom accessible legal-tech CSS (off-white `#FAF8F5` background, deep navy `#0F1E36` headings, subtle gold `#C59B27` accents) and provides a **Pipeline Configuration Sidebar** alongside four workspace tabs:
+
+- **Pipeline Configuration Sidebar:**
+  1. **Retrieval Strategy:** Switch live between `hybrid` (`BM25 + MiniLM-L6-v2`), `bm25`, `dense`, and `tfidf`, or load defaults from `configs/final.yaml` or `configs/baseline.yaml`.
+  2. **Top-K Passages:** Slider (`1–10`) passed directly into `ClauseTraceRetriever.search(query, top_k=Top-K)`.
+  3. **Abstention Gate:** Enable/disable toggle (`abstention.enabled`). When disabled, relevance score thresholds are bypassed so top-$K$ candidate clauses are always returned (only the empty/non-alphanumeric input safety check `< 3` characters remains active as `abstained_invalid_query`).
+  4. **Advanced Settings:** Collapsible controls for abstention mode (`dual_gate` vs `single_threshold`), thresholds (`min_top_score`, `min_clause_score`, `min_doc_match_score`), hybrid fusion (`linear` vs `rrf`), and optional Cross-Encoder reranking (`rerank.enabled`). Chunk size, overlap, and routing weights remain fixed in the YAML files for index reproducibility.
+  5. **Active Configuration:** Displays the active strategy, `Top-K`, abstention status, SHA-256 config/index fingerprints, and whether settings match a saved YAML file or contain temporary UI overrides.
+- **Workspace Tabs:**
+  1. **Clause Search:** Natural-language question input, optional sample answerable and unanswerable queries, **Search** button, ranked supporting passages with source paths, verified `[char_start:char_end]` offsets, highlighted query terms, surrounding contract context, and honest abstention explanations (including a clear disclaimer that similarity scores are not calibrated legal probabilities).
+  2. **Evaluation:** Measured character-level `Precision@K`, `Recall@K`, and `F1@K` at $K \in \{1, 3, 5, 10\}$ plus bidirectional abstention metrics, clearly separated between the **Train Split** (`140` answerable, `26` unanswerable) and **Held-Out Test Split** (`54` answerable, `10` unanswerable).
+  3. **Experiments:** Complete audit trail of the baseline (`Iteration 0`) and all `7` post-baseline improvement iterations read directly from `experiments/experiment_log.jsonl` and `experiments/experiment_log.csv`, showing accepted (`1, 2, 3, 5, 7`) and rejected (`4, 6`) changes, guardrail checks, and failure taxonomy counts.
+  4. **Active Configuration:** Side-by-side comparison of the active in-memory configuration against the saved `configs/final.yaml` or `configs/baseline.yaml` file on disk.
 
 ### D. Optional FastAPI Backend Server
 

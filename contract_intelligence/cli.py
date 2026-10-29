@@ -8,6 +8,12 @@ import sys
 from pathlib import Path
 from typing import Literal
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 import typer
 from rich.console import Console
 from rich.panel import Panel
